@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Req_Loan.html</title>
+    <script  type="text/javascript">
+        function Chkname() {
+            var FullName = document.getElementById("as");
+            // Test Full nmae
+            var pos = FullName.value.search(/[أ-ي]/);
+            if (pos != 0) {
+                alert("أدخال الاحراف الهجائية" + FullName.value +"اسمك عزيزي" );
+                FullName.focus();
+                FullName.select();
+                return false;
+            } else
+                return true;
+        }
+        function chknumber() {
+            var number1 = document.getElementById("test_number");
+            // test number
+            var pos = number1.value.search(/01\d{9}|02\d{9}|03\d{9}|04\d{9}|05\d{9}|06\d{9}|07\d{9}|08\d{9}|09\d{9}|10\d{9}|11\{9}|12\{9}|13\{9}|14\d{9}/);
+            if (pos != 0) {
+                alert("إدخال الرقم الوطني الصحيح" + number1.value + "01");
+                number1.focus();
+                number1.select();
+                return false;
+            } else
+                return true;
+        }
+        function chkPhone() {
+            var myPhone = document.getElementById("phone");
+            // Test the format of the input phone number
+            var pos = myPhone.value.search(/^((\0)9|0)[3-9](\d{2}){4}$/);
+            if (pos != 0) {
+                alert("ادخال الرقم الصحيح  " + myPhone.value + "من  الصيغة 09")
+                myPhone.focus();
+                myPhone.select();
+                return false;
+            } else
+                return true;
+        }
+       
+        
+        function validatedate(inputText) {
+            var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+            // Match the date format through regular expression
+            if (inputText.value.match(dateformat)) {
+                document.form1.text1.focus();
+                //Test which seperator is used '/' or '-'
+                var opera1 = inputText.value.split('/');
+                var opera2 = inputText.value.split('-');
+                lopera1 = opera1.length;
+                lopera2 = opera2.length;
+                // Extract the string into month, date and year
+                if (lopera1 > 1) {
+                    var pdate = inputText.value.split('/');
+                }
+                else if (lopera2 > 1) {
+                    var pdate = inputText.value.split('-');
+                }
+                var dd = parseInt(pdate[0]);
+                var mm = parseInt(pdate[1]);
+                var yy = parseInt(pdate[2]);
+                // Create list of days of a month [assume there is no leap year by default]
+                var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                if (mm == 1 || mm > 2) {
+                    if (dd > ListofDays[mm - 1]) {
+                        alert('Invalid date format!');
+                        return false;
+                    }
+                }
+                if (mm == 2) {
+                    var lyear = false;
+                    if ((!(yy % 4) && yy % 100) || !(yy % 400)) {
+                        lyear = true;
+                    }
+                    if ((lyear == false) && (dd >= 29)) {
+                        alert('Invalid date format!');
+                        return false;
+                    }
+                    if ((lyear == true) && (dd > 29)) {
+                        alert('Invalid date format!');
+                        return false;
+                    }
+                }
+            }
+            else {
+                alert("Invalid date format!");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+        function Captcha() {
+            var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+            var i;
+            for (i = 0; i < 6; i++) {
+                var a = alpha[Math.floor(Math.random() * alpha.length)];
+                var b = alpha[Math.floor(Math.random() * alpha.length)];
+                var c = alpha[Math.floor(Math.random() * alpha.length)];
+                var d = alpha[Math.floor(Math.random() * alpha.length)];
+                var e = alpha[Math.floor(Math.random() * alpha.length)];
+                var f = alpha[Math.floor(Math.random() * alpha.length)];
+                var g = alpha[Math.floor(Math.random() * alpha.length)];
+            }
+            var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' ' + f + ' ' + g;
+            document.getElementById("mainCaptcha").value = code
+        }
+        function ValidCaptcha() {
+            form= document.getElementById("myform")
+            var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+            var string2 = removeSpaces(document.getElementById('txtInput').value);
+            if (string1 == string2) {
+                return form.action="result.html";
+                
+                    
+                
+                
+            }
+            else {
+                return form.onload=Captcha();
+                
+            }
+        }
+        function removeSpaces(string) {
+            return string.split(' ').join('');
+        }
+        function chkPhone() {
+            var myPhone = document.getElementById("phone");
+            // Test the format of the input phone number
+            var pos = myPhone.value.search(/^\d{3}-\d{3}-\d{4}$/);
+            if (pos != 0) {
+                alert("ادخال الرقم الصحيح  " + myPhone.value + "من  الصيغة 093")
+                myPhone.focus();
+                myPhone.select();
+                return false;
+            } else
+                return true;
+        }
+        
+
+
+    </script>
+
+   
+</head>
+<body onload="Captcha();"  class="body" >
+    <div class="h">
+        <a href="products.html" target="_blank" title="الانتقال الى صفحة المنتجات"> منتجاتنا و خدماتنا</a>
+        <a href="Req_Loan.html" target="_blank" title="الانتقال الى صفحة تقديم طلب للقرض"> تقديم طلب قرض </a>
+        <a href="aboutus.html" target="_blank" title="الانتقال الى صفحة من نحن">من نحن</a>
+        <a href="home.html" target="_blank" title="الانتقال الى الصفحة الرئيسية">الصفحة الرئيسية</a>
+       </div>
+    <form name="form1" id="myform"   target="_blank"  onload="document.form1.text1.focus();" >
+        <p>
+            الاسم الكامل
+            <input type="text" id="as" name="الاسم " onchange="Chkname();" required />
+        </p>
+        <p>
+            الرقم الوطني
+            <input type="text" id="test_number" name="الرقم الوطني" onchange="chknumber();" required />
+        </p>
+        <p>
+            تاريخ الميلاد
+            <input type="text" name="تاريخ الميلاد" onchange="validatedate(document.form1.text1)" id="br" required/>
+        </p>
+        <p>
+            رقم الهاتف
+            <input type="text" id="phone"  name="رقم الهاتف" onchange="chkPhone();" required />
+        </p>
+        <p>
+            البريد الكتروني
+            <input type="email"  id="mail" name="الايميل" required/>
+        </p>
+        <p>
+            قمية الدفع
+            <select id="se" name="قيمة الدفع" required>
+            
+                <option value="1" >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </p>
+        <div>
+            <h2> نوع القرض</h2>
+            <input type="radio" name="نوع القرض"  value="تعليمي"  required/>قرض تعليمي <br />
+            <input type="radio" name="نوع القرض" value="سكني"  required /> قرض سكني <br />
+            <input type="radio" name="نوع القرض" value="زراعي"required/> قرض زارعي <br />
+            <input type="radio" name="نوع القرض" value="تجاري"required/> قرض تجاري  <br />
+            <input type="radio" name="نوع القرض" value="ورشات"required/> قرض الورشات  <br />
+        </div>
+        <div >
+            <h2>عدد سنوات التسديد</h2>
+            <input type="radio" name="عدد سنوات التسدسد" value="3" required/>3<br />
+            <input type="radio" name="عدد سنوات التسدسد" value="5" required/>5<br />
+            <input type="radio" name="عدد سنوات التسدسد"  value="10"required/>10<br />
+            <input type="radio" name="عدد سنوات التسدسد" value="15" required/>15 <br />
+            <input type="radio" name="عدد سنوات التسدسد"  value="20" required/>20 <br />
+        </div>
+        <label for="dd"><h2> طريقة تسديد الدفعات</h2>  </label>
+        <select id="dd" name="طريقة تسديد الدفعات" required>
+            
+            <option value="شهرية" >شهرية</option>
+            <option value="ربعية" >ربعية</option>
+            <option value="سنوية" >سنوية</option>
+        </select>
+        
+        <br>
+        <br>
+
+
+        <table>
+            <tr>
+                <td>
+                    Text Captcha<br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="mainCaptcha" />
+                    <input type="button" id="refresh" value="Refresh" onclick="Captcha();" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="txtInput" name="الرمز كابتشا" />
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+        <input type="submit" name="submit" value="ارسال" onclick="alert(ValidCaptcha());" />
+        
+    </form>
+</body>
+</html>

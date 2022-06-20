@@ -1,0 +1,290 @@
+@font-face
+{
+    font-family: myfont;
+   src: url('font/my.ttf')
+}
+#head{
+    
+   
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+text-align: center;
+font-size: large;
+
+
+}
+.body{
+    align-items: center;
+    font-family: myfont;
+    
+    background-color: white;
+}
+
+
+
+#table{
+border-style: none;    
+    margin: auto;
+ border-color: rgb(65, 62, 62);
+ 
+    
+    
+}
+td  {
+    background-color: rgb(245, 245, 245);
+   border: none;
+    margin: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    
+    font-size: 20px;
+   
+
+   
+
+}
+th{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(141, 209, 223);
+
+    padding:10px;
+    text-align: center;
+   
+    font-family: myfont;
+    font-size: 30px;
+
+
+}
+
+
+
+#myform
+{
+   margin: auto;
+   padding: 30px;
+   font-size: medium;
+ background-image: url('tow.png');
+background-repeat: no-repeat;
+background-size: contain;
+  
+}
+#container{
+    text-align: center;
+padding: auto;
+margin: auto;
+}
+#n{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+#text{
+    text-align: center;
+    color: ;
+} 
+.h{
+    padding: 16px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+font-size: x-large;
+background-color: rgb(141, 209, 223);
+
+border-radius: 30px;
+
+
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+}
+pre{
+    text-align: right;
+    font-family: myfont;
+    font-size: large;
+}
+#tawfeer{
+
+    border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+}
+
+#hesapjare{
+    overflow: auto;
+    border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; 
+}
+#taleem{
+
+    border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+
+}
+#warshat{ border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+}
+#naql{ border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+}
+
+#skan{
+    border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+
+}
+#tjaki{
+    border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+}
+#zraay{
+    border: 10px ;
+    border-color: rgb(4, 23, 77);
+    border-style: dotted;
+    border-radius: 50px;
+    text-align: center;
+
+    font-size: x-large;
+    margin-top: 500px; `
+    text-align: center;
+
+}
+.k{
+  
+    display: inline-block;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   margin-left: 50%;
+   margin-right: 39%;
+    text-align: center;
+   
+    border: 10px;
+    border-radius: 50px;
+    border-style:dotted;
+    color: rgb(4, 23, 77); 
+   
+}
+.kk{
+
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 50px;
+     text-align: center;
+    
+     border: 10px;
+     border-radius: 50px;
+     border-style:dotted;
+     color: rgb(4, 23, 77); 
+    
+
+}
+#oneimg{
+    
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        padding: auto;
+    display: inline;
+        text-align: center;
+}
+#as  { 
+    
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX;
+}
+#test_number{
+    
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX;
+
+}#br{
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX; 
+}
+#phone{
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX; 
+    
+
+}
+#mail{
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX; 
+}
+#se{
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX; 
+}
+
+#q{
+    background-color: rgb(212, 239, 245);
+    
+    border-radius: 20PX;
+}

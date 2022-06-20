@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title></title>
+</head>
+<body class="body">
+  <div class="h">
+    <a href="products.html" target="_blank" title="الانتقال الى صفحة المنتجات"> منتجاتنا و خدماتنا</a>
+    <a href="Req_Loan.html" target="_blank" title="الانتقال الى صفحة تقديم طلب للقرض"> تقديم طلب قرض </a>
+    <a href="aboutus.html" target="_blank" title="الانتقال الى صفحة من نحن">من نحن</a>
+    <a href="home.html" target="_blank" title="الانتقال الى الصفحة الرئيسية">الصفحة الرئيسية</a>
+   </div>
+   <script>
+ 
+ var queryString = decodeURIComponent(window.location.search);
+    queryString = queryString.substring(1);
+    var queries = queryString.split("&");
+    for (var i = 0; i < queries.length; i++)
+    {
+      document.write(queries[i] + "<br>");
+    }
+     
+    </script> 
+
+  
+    
+</body>
+</html>
